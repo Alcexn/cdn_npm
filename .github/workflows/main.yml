@@ -22,9 +22,10 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      
       - name: Push
         run: |
-          git add -A
+          git add .
           git commit -m "Publish"
           git push origin main --force
 
