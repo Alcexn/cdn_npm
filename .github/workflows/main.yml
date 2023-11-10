@@ -26,4 +26,5 @@ jobs:
         run: |
           git add -A
           git commit -m "Publish"
-          git push
+          git push origin main --force
+
