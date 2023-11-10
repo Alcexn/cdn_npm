@@ -19,6 +19,7 @@ jobs:
           node-version: "12.x"
           registry-url: https://registry.npmjs.org/
       - run: |
+             npm install node-fetch
              node update.js
              npm version patch
       - run: npm publish
