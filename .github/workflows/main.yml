@@ -18,14 +18,9 @@ jobs:
         with:
           node-version: "12.x"
           registry-url: https://registry.npmjs.org/
-      - run: npm version patch
+      - run: |
+             node update.js
+             npm version patch
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      
-      - name: Push
-        run: |
-          git add .
-          git commit -m "Publish"
-          git push origin main --force
-
