@@ -1,5 +1,5 @@
 name: Node.js Package
-# 监测图床分支，2020年10月后github新建仓库默认分支改为main，记得更改
+
 on:
   push:
     branches:
@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Set up Git
+        run: |
+          git config --global user.email "alcexn@163.com"
+          git config --global user.name "Alcexn"
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
