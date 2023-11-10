@@ -1,4 +1,5 @@
 {
+  "type": "commonjs"
   "name": "alcex-static",
   "version": "1.0.5",
   "description": "",
