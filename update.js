@@ -1,6 +1,6 @@
-import fetch from 'node-fetch';
-import md5 from 'js-md5';
-import fs from 'fs/promises';
+const fetch = require('node-fetch');
+const md5 = require('js-md5');
+const fs = require('fs').promises;
 
 const getVersion = async () => {
     const response = await fetch('https://registry.npmjs.org/alcex-static/latest');
